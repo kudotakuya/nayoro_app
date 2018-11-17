@@ -27,7 +27,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() { do {
         super.viewDidLoad()
-        self.postJson()
         
         healthStore.requestAuthorization(toShare: nil, read: readDataTypes) { (success, error) in
             guard success, error == nil else {
@@ -83,6 +82,7 @@ class ViewController: UIViewController {
         let endDate = dateformatter.date(from: nowDate)
         var time = ""
         var calc_time = 0
+        var now_data = ""
         
         print(nowDate)
         print(secondHourDate)
@@ -100,9 +100,12 @@ class ViewController: UIViewController {
                 time = dateformatter.string(from: calendar.date(byAdding: comps, to: startDate as! Date)!)
                 calc_time += 5
                 average += "\(time) 平均値 \(statistic.averageQuantity()?.doubleValue(for: HKUnit(from: "count/min")).rounded() ?? 0) 脈/分\n"
+                now_data = "\(statistic.averageQuantity()?.doubleValue(for: HKUnit(from: "count/min")).rounded() ?? 0)"
+                
                 self.money -= 3
             }
             
+            self.postJson(time: nowDate, heart_rate: now_data)
             after(average, self.money)
             
         }
@@ -111,7 +114,7 @@ class ViewController: UIViewController {
         
     }
     
-    private func postJson() {
+    private func postJson(time: String, heart_rate: String) {
         let urlString = "https://gmail60.cybozu.com/k/v1/record.json"
     
         let request = NSMutableURLRequest(url: URL(string: urlString)!)
@@ -126,13 +129,13 @@ class ViewController: UIViewController {
             "app": 6,
             "record":[
                 "user_id":[
-                    "value":"001"
+                    "value": "001"
                 ],
                 "get_time":[
-                    "value":"2018 11/17 19:26"
+                    "value": time
                 ],
                 "heart_rate":[
-                    "value":"87"
+                    "value": heart_rate
                 ]
             ]
         ]
@@ -143,7 +146,6 @@ class ViewController: UIViewController {
             let task:URLSessionDataTask = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: {(data,response,error) -> Void in
                 let resultData = String(data: data!, encoding: .utf8)!
                 print("result:\(resultData)")
-                print("response:\(response)")
             })
             task.resume()
         }catch{
