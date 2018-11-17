@@ -1,0 +1,912 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		882DD233219FE3D900D77611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DD232219FE3D900D77611 /* AppDelegate.swift */; };
+		882DD235219FE3D900D77611 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DD234219FE3D900D77611 /* ViewController.swift */; };
+		882DD238219FE3D900D77611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882DD236219FE3D900D77611 /* Main.storyboard */; };
+		882DD23A219FE3DA00D77611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882DD239219FE3DA00D77611 /* Assets.xcassets */; };
+		882DD23D219FE3DA00D77611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882DD23B219FE3DA00D77611 /* LaunchScreen.storyboard */; };
+		882DD248219FE3DA00D77611 /* nayoro_watchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DD247219FE3DA00D77611 /* nayoro_watchTests.swift */; };
+		882DD253219FE3DA00D77611 /* nayoro_watchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DD252219FE3DA00D77611 /* nayoro_watchUITests.swift */; };
+		882DD258219FE3DA00D77611 /* nayoro_watch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 882DD257219FE3DA00D77611 /* nayoro_watch WatchKit App.app */; };
+		882DD25E219FE3DA00D77611 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882DD25C219FE3DA00D77611 /* Interface.storyboard */; };
+		882DD260219FE3DB00D77611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882DD25F219FE3DB00D77611 /* Assets.xcassets */; };
+		882DD267219FE3DB00D77611 /* nayoro_watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 882DD266219FE3DB00D77611 /* nayoro_watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		882DD26C219FE3DB00D77611 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DD26B219FE3DB00D77611 /* InterfaceController.swift */; };
+		882DD26E219FE3DB00D77611 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DD26D219FE3DB00D77611 /* ExtensionDelegate.swift */; };
+		882DD270219FE3DB00D77611 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DD26F219FE3DB00D77611 /* NotificationController.swift */; };
+		882DD272219FE3DC00D77611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882DD271219FE3DC00D77611 /* Assets.xcassets */; };
+		882DD28B219FE44400D77611 /* HealthKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882DD289219FE44400D77611 /* HealthKitUI.framework */; };
+		882DD28C219FE44400D77611 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882DD28A219FE44400D77611 /* HealthKit.framework */; };
+		882DD290219FE4AF00D77611 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882DD28F219FE4AF00D77611 /* HealthKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		882DD244219FE3DA00D77611 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 882DD227219FE3D900D77611 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 882DD22E219FE3D900D77611;
+			remoteInfo = nayoro_watch;
+		};
+		882DD24F219FE3DA00D77611 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 882DD227219FE3D900D77611 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 882DD22E219FE3D900D77611;
+			remoteInfo = nayoro_watch;
+		};
+		882DD259219FE3DA00D77611 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 882DD227219FE3D900D77611 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 882DD256219FE3DA00D77611;
+			remoteInfo = "nayoro_watch WatchKit App";
+		};
+		882DD268219FE3DB00D77611 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 882DD227219FE3D900D77611 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 882DD265219FE3DB00D77611;
+			remoteInfo = "nayoro_watch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		882DD27A219FE3DC00D77611 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				882DD267219FE3DB00D77611 /* nayoro_watch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		882DD27E219FE3DC00D77611 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				882DD258219FE3DA00D77611 /* nayoro_watch WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		882DD22F219FE3D900D77611 /* nayoro_watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nayoro_watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		882DD232219FE3D900D77611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		882DD234219FE3D900D77611 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		882DD237219FE3D900D77611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		882DD239219FE3DA00D77611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		882DD23C219FE3DA00D77611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		882DD23E219FE3DA00D77611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		882DD243219FE3DA00D77611 /* nayoro_watchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nayoro_watchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		882DD247219FE3DA00D77611 /* nayoro_watchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nayoro_watchTests.swift; sourceTree = "<group>"; };
+		882DD249219FE3DA00D77611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		882DD24E219FE3DA00D77611 /* nayoro_watchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nayoro_watchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		882DD252219FE3DA00D77611 /* nayoro_watchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nayoro_watchUITests.swift; sourceTree = "<group>"; };
+		882DD254219FE3DA00D77611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		882DD257219FE3DA00D77611 /* nayoro_watch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nayoro_watch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		882DD25D219FE3DA00D77611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		882DD25F219FE3DB00D77611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		882DD261219FE3DB00D77611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		882DD266219FE3DB00D77611 /* nayoro_watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "nayoro_watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		882DD26B219FE3DB00D77611 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		882DD26D219FE3DB00D77611 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		882DD26F219FE3DB00D77611 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		882DD271219FE3DC00D77611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		882DD273219FE3DC00D77611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		882DD274219FE3DC00D77611 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		882DD289219FE44400D77611 /* HealthKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKitUI.framework; path = System/Library/Frameworks/HealthKitUI.framework; sourceTree = SDKROOT; };
+		882DD28A219FE44400D77611 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		882DD28D219FE4A000D77611 /* nayoro_watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nayoro_watch.entitlements; sourceTree = "<group>"; };
+		882DD28E219FE4AF00D77611 /* nayoro_watch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "nayoro_watch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		882DD28F219FE4AF00D77611 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		882DD22C219FE3D900D77611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				882DD28B219FE44400D77611 /* HealthKitUI.framework in Frameworks */,
+				882DD28C219FE44400D77611 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		882DD240219FE3DA00D77611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		882DD24B219FE3DA00D77611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		882DD263219FE3DB00D77611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				882DD290219FE4AF00D77611 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		882DD226219FE3D900D77611 = {
+			isa = PBXGroup;
+			children = (
+				882DD231219FE3D900D77611 /* nayoro_watch */,
+				882DD246219FE3DA00D77611 /* nayoro_watchTests */,
+				882DD251219FE3DA00D77611 /* nayoro_watchUITests */,
+				882DD25B219FE3DA00D77611 /* nayoro_watch WatchKit App */,
+				882DD26A219FE3DB00D77611 /* nayoro_watch WatchKit Extension */,
+				882DD230219FE3D900D77611 /* Products */,
+				882DD288219FE44400D77611 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		882DD230219FE3D900D77611 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				882DD22F219FE3D900D77611 /* nayoro_watch.app */,
+				882DD243219FE3DA00D77611 /* nayoro_watchTests.xctest */,
+				882DD24E219FE3DA00D77611 /* nayoro_watchUITests.xctest */,
+				882DD257219FE3DA00D77611 /* nayoro_watch WatchKit App.app */,
+				882DD266219FE3DB00D77611 /* nayoro_watch WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		882DD231219FE3D900D77611 /* nayoro_watch */ = {
+			isa = PBXGroup;
+			children = (
+				882DD28D219FE4A000D77611 /* nayoro_watch.entitlements */,
+				882DD232219FE3D900D77611 /* AppDelegate.swift */,
+				882DD234219FE3D900D77611 /* ViewController.swift */,
+				882DD236219FE3D900D77611 /* Main.storyboard */,
+				882DD239219FE3DA00D77611 /* Assets.xcassets */,
+				882DD23B219FE3DA00D77611 /* LaunchScreen.storyboard */,
+				882DD23E219FE3DA00D77611 /* Info.plist */,
+			);
+			path = nayoro_watch;
+			sourceTree = "<group>";
+		};
+		882DD246219FE3DA00D77611 /* nayoro_watchTests */ = {
+			isa = PBXGroup;
+			children = (
+				882DD247219FE3DA00D77611 /* nayoro_watchTests.swift */,
+				882DD249219FE3DA00D77611 /* Info.plist */,
+			);
+			path = nayoro_watchTests;
+			sourceTree = "<group>";
+		};
+		882DD251219FE3DA00D77611 /* nayoro_watchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				882DD252219FE3DA00D77611 /* nayoro_watchUITests.swift */,
+				882DD254219FE3DA00D77611 /* Info.plist */,
+			);
+			path = nayoro_watchUITests;
+			sourceTree = "<group>";
+		};
+		882DD25B219FE3DA00D77611 /* nayoro_watch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				882DD25C219FE3DA00D77611 /* Interface.storyboard */,
+				882DD25F219FE3DB00D77611 /* Assets.xcassets */,
+				882DD261219FE3DB00D77611 /* Info.plist */,
+			);
+			path = "nayoro_watch WatchKit App";
+			sourceTree = "<group>";
+		};
+		882DD26A219FE3DB00D77611 /* nayoro_watch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				882DD28E219FE4AF00D77611 /* nayoro_watch WatchKit Extension.entitlements */,
+				882DD26B219FE3DB00D77611 /* InterfaceController.swift */,
+				882DD26D219FE3DB00D77611 /* ExtensionDelegate.swift */,
+				882DD26F219FE3DB00D77611 /* NotificationController.swift */,
+				882DD271219FE3DC00D77611 /* Assets.xcassets */,
+				882DD273219FE3DC00D77611 /* Info.plist */,
+				882DD274219FE3DC00D77611 /* PushNotificationPayload.apns */,
+			);
+			path = "nayoro_watch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		882DD288219FE44400D77611 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				882DD28F219FE4AF00D77611 /* HealthKit.framework */,
+				882DD28A219FE44400D77611 /* HealthKit.framework */,
+				882DD289219FE44400D77611 /* HealthKitUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		882DD22E219FE3D900D77611 /* nayoro_watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 882DD27F219FE3DC00D77611 /* Build configuration list for PBXNativeTarget "nayoro_watch" */;
+			buildPhases = (
+				882DD22B219FE3D900D77611 /* Sources */,
+				882DD22C219FE3D900D77611 /* Frameworks */,
+				882DD22D219FE3D900D77611 /* Resources */,
+				882DD27E219FE3DC00D77611 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				882DD25A219FE3DA00D77611 /* PBXTargetDependency */,
+			);
+			name = nayoro_watch;
+			productName = nayoro_watch;
+			productReference = 882DD22F219FE3D900D77611 /* nayoro_watch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		882DD242219FE3DA00D77611 /* nayoro_watchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 882DD282219FE3DC00D77611 /* Build configuration list for PBXNativeTarget "nayoro_watchTests" */;
+			buildPhases = (
+				882DD23F219FE3DA00D77611 /* Sources */,
+				882DD240219FE3DA00D77611 /* Frameworks */,
+				882DD241219FE3DA00D77611 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				882DD245219FE3DA00D77611 /* PBXTargetDependency */,
+			);
+			name = nayoro_watchTests;
+			productName = nayoro_watchTests;
+			productReference = 882DD243219FE3DA00D77611 /* nayoro_watchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		882DD24D219FE3DA00D77611 /* nayoro_watchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 882DD285219FE3DC00D77611 /* Build configuration list for PBXNativeTarget "nayoro_watchUITests" */;
+			buildPhases = (
+				882DD24A219FE3DA00D77611 /* Sources */,
+				882DD24B219FE3DA00D77611 /* Frameworks */,
+				882DD24C219FE3DA00D77611 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				882DD250219FE3DA00D77611 /* PBXTargetDependency */,
+			);
+			name = nayoro_watchUITests;
+			productName = nayoro_watchUITests;
+			productReference = 882DD24E219FE3DA00D77611 /* nayoro_watchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		882DD256219FE3DA00D77611 /* nayoro_watch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 882DD27B219FE3DC00D77611 /* Build configuration list for PBXNativeTarget "nayoro_watch WatchKit App" */;
+			buildPhases = (
+				882DD255219FE3DA00D77611 /* Resources */,
+				882DD27A219FE3DC00D77611 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				882DD269219FE3DB00D77611 /* PBXTargetDependency */,
+			);
+			name = "nayoro_watch WatchKit App";
+			productName = "nayoro_watch WatchKit App";
+			productReference = 882DD257219FE3DA00D77611 /* nayoro_watch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		882DD265219FE3DB00D77611 /* nayoro_watch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 882DD277219FE3DC00D77611 /* Build configuration list for PBXNativeTarget "nayoro_watch WatchKit Extension" */;
+			buildPhases = (
+				882DD262219FE3DB00D77611 /* Sources */,
+				882DD263219FE3DB00D77611 /* Frameworks */,
+				882DD264219FE3DB00D77611 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "nayoro_watch WatchKit Extension";
+			productName = "nayoro_watch WatchKit Extension";
+			productReference = 882DD266219FE3DB00D77611 /* nayoro_watch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		882DD227219FE3D900D77611 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Takuya Kudo";
+				TargetAttributes = {
+					882DD22E219FE3D900D77611 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
+					882DD242219FE3DA00D77611 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 882DD22E219FE3D900D77611;
+					};
+					882DD24D219FE3DA00D77611 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 882DD22E219FE3D900D77611;
+					};
+					882DD256219FE3DA00D77611 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					882DD265219FE3DB00D77611 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 882DD22A219FE3D900D77611 /* Build configuration list for PBXProject "nayoro_watch" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 882DD226219FE3D900D77611;
+			productRefGroup = 882DD230219FE3D900D77611 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				882DD22E219FE3D900D77611 /* nayoro_watch */,
+				882DD242219FE3DA00D77611 /* nayoro_watchTests */,
+				882DD24D219FE3DA00D77611 /* nayoro_watchUITests */,
+				882DD256219FE3DA00D77611 /* nayoro_watch WatchKit App */,
+				882DD265219FE3DB00D77611 /* nayoro_watch WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		882DD22D219FE3D900D77611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				882DD23D219FE3DA00D77611 /* LaunchScreen.storyboard in Resources */,
+				882DD23A219FE3DA00D77611 /* Assets.xcassets in Resources */,
+				882DD238219FE3D900D77611 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		882DD241219FE3DA00D77611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		882DD24C219FE3DA00D77611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		882DD255219FE3DA00D77611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				882DD260219FE3DB00D77611 /* Assets.xcassets in Resources */,
+				882DD25E219FE3DA00D77611 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		882DD264219FE3DB00D77611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				882DD272219FE3DC00D77611 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		882DD22B219FE3D900D77611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				882DD235219FE3D900D77611 /* ViewController.swift in Sources */,
+				882DD233219FE3D900D77611 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		882DD23F219FE3DA00D77611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				882DD248219FE3DA00D77611 /* nayoro_watchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		882DD24A219FE3DA00D77611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				882DD253219FE3DA00D77611 /* nayoro_watchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		882DD262219FE3DB00D77611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				882DD270219FE3DB00D77611 /* NotificationController.swift in Sources */,
+				882DD26E219FE3DB00D77611 /* ExtensionDelegate.swift in Sources */,
+				882DD26C219FE3DB00D77611 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		882DD245219FE3DA00D77611 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 882DD22E219FE3D900D77611 /* nayoro_watch */;
+			targetProxy = 882DD244219FE3DA00D77611 /* PBXContainerItemProxy */;
+		};
+		882DD250219FE3DA00D77611 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 882DD22E219FE3D900D77611 /* nayoro_watch */;
+			targetProxy = 882DD24F219FE3DA00D77611 /* PBXContainerItemProxy */;
+		};
+		882DD25A219FE3DA00D77611 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 882DD256219FE3DA00D77611 /* nayoro_watch WatchKit App */;
+			targetProxy = 882DD259219FE3DA00D77611 /* PBXContainerItemProxy */;
+		};
+		882DD269219FE3DB00D77611 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 882DD265219FE3DB00D77611 /* nayoro_watch WatchKit Extension */;
+			targetProxy = 882DD268219FE3DB00D77611 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		882DD236219FE3D900D77611 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				882DD237219FE3D900D77611 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		882DD23B219FE3DA00D77611 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				882DD23C219FE3DA00D77611 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		882DD25C219FE3DA00D77611 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				882DD25D219FE3DA00D77611 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		882DD275219FE3DC00D77611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		882DD276219FE3DC00D77611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		882DD278219FE3DC00D77611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "nayoro_watch WatchKit Extension/nayoro_watch WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89368WAFTH;
+				INFOPLIST_FILE = "nayoro_watch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kudotakuya.com.nayoro-watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		882DD279219FE3DC00D77611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "nayoro_watch WatchKit Extension/nayoro_watch WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89368WAFTH;
+				INFOPLIST_FILE = "nayoro_watch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kudotakuya.com.nayoro-watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		882DD27C219FE3DC00D77611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89368WAFTH;
+				IBSC_MODULE = nayoro_watch_WatchKit_Extension;
+				INFOPLIST_FILE = "nayoro_watch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "kudotakuya.com.nayoro-watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		882DD27D219FE3DC00D77611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89368WAFTH;
+				IBSC_MODULE = nayoro_watch_WatchKit_Extension;
+				INFOPLIST_FILE = "nayoro_watch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "kudotakuya.com.nayoro-watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		882DD280219FE3DC00D77611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = nayoro_watch/nayoro_watch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89368WAFTH;
+				INFOPLIST_FILE = nayoro_watch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kudotakuya.com.nayoro-watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		882DD281219FE3DC00D77611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = nayoro_watch/nayoro_watch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89368WAFTH;
+				INFOPLIST_FILE = nayoro_watch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kudotakuya.com.nayoro-watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		882DD283219FE3DC00D77611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89368WAFTH;
+				INFOPLIST_FILE = nayoro_watchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kudotakuya.com.nayoro-watchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nayoro_watch.app/nayoro_watch";
+			};
+			name = Debug;
+		};
+		882DD284219FE3DC00D77611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89368WAFTH;
+				INFOPLIST_FILE = nayoro_watchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kudotakuya.com.nayoro-watchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nayoro_watch.app/nayoro_watch";
+			};
+			name = Release;
+		};
+		882DD286219FE3DC00D77611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89368WAFTH;
+				INFOPLIST_FILE = nayoro_watchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kudotakuya.com.nayoro-watchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = nayoro_watch;
+			};
+			name = Debug;
+		};
+		882DD287219FE3DC00D77611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89368WAFTH;
+				INFOPLIST_FILE = nayoro_watchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kudotakuya.com.nayoro-watchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = nayoro_watch;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		882DD22A219FE3D900D77611 /* Build configuration list for PBXProject "nayoro_watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				882DD275219FE3DC00D77611 /* Debug */,
+				882DD276219FE3DC00D77611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		882DD277219FE3DC00D77611 /* Build configuration list for PBXNativeTarget "nayoro_watch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				882DD278219FE3DC00D77611 /* Debug */,
+				882DD279219FE3DC00D77611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		882DD27B219FE3DC00D77611 /* Build configuration list for PBXNativeTarget "nayoro_watch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				882DD27C219FE3DC00D77611 /* Debug */,
+				882DD27D219FE3DC00D77611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		882DD27F219FE3DC00D77611 /* Build configuration list for PBXNativeTarget "nayoro_watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				882DD280219FE3DC00D77611 /* Debug */,
+				882DD281219FE3DC00D77611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		882DD282219FE3DC00D77611 /* Build configuration list for PBXNativeTarget "nayoro_watchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				882DD283219FE3DC00D77611 /* Debug */,
+				882DD284219FE3DC00D77611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		882DD285219FE3DC00D77611 /* Build configuration list for PBXNativeTarget "nayoro_watchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				882DD286219FE3DC00D77611 /* Debug */,
+				882DD287219FE3DC00D77611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 882DD227219FE3D900D77611 /* Project object */;
+}
