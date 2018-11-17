@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var money = 10000
     var ave = ""
     var mon = 0
+    
     // ワークアウトと心拍数を読み出しに設定
     private let readDataTypes: Set<HKObjectType> = [
         HKWorkoutType.workoutType(),
@@ -26,6 +27,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() { do {
         super.viewDidLoad()
+        self.postJson()
+        
         healthStore.requestAuthorization(toShare: nil, read: readDataTypes) { (success, error) in
             guard success, error == nil else {
                 return
@@ -106,6 +109,48 @@ class ViewController: UIViewController {
         
         healthStore.execute(query)
         
+    }
+    
+    private func postJson() {
+        let urlString = "https://gmail60.cybozu.com/k/v1/record.json"
+    
+        let request = NSMutableURLRequest(url: URL(string: urlString)!)
+    
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("CCjFz4XeW0Fc79GEEL9aR6DHJrGrnAwwKt7ZkuzZ", forHTTPHeaderField: "X-Cybozu-API-Token")
+    
+    
+    
+        let params:[String:Any] = [
+            "app": 6,
+            "record":[
+                "user_id":[
+                    "value":"001"
+                ],
+                "get_time":[
+                    "value":"2018 11/17 19:26"
+                ],
+                "heart_rate":[
+                    "value":"87"
+                ]
+            ]
+        ]
+    
+        do{
+            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+    
+            let task:URLSessionDataTask = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: {(data,response,error) -> Void in
+                let resultData = String(data: data!, encoding: .utf8)!
+                print("result:\(resultData)")
+                print("response:\(response)")
+            })
+            task.resume()
+        }catch{
+            print("Error:\(error)")
+            return
+        }
+    
     }
     
 }
