@@ -51,6 +51,7 @@ class ViewController: UIViewController {
             print("最低値 \(statistic.minimumQuantity()?.doubleValue(for: HKUnit(from: "count/min")) ?? 0) bpm")
             print("最高値 \(statistic.maximumQuantity()?.doubleValue(for: HKUnit(from: "count/min")) ?? 0) bpm")
             print("平均値 \(statistic.averageQuantity()?.doubleValue(for: HKUnit(from: "count/min")) ?? 0) bpm")
+            print("-------------")
         }
         healthStore.execute(query)
     }
@@ -60,10 +61,11 @@ class ViewController: UIViewController {
     private func getHeartRateWithFiveMinutes() {
         var dateComponents = DateComponents()
         let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "yyyy/MM/dd"
-        let startDate = dateformatter.date(from: "2018/11/17")
-        let endDate = dateformatter.date(from: "2018/11/18")
-        dateComponents.minute = 60  // 間隔時間
+        dateformatter.locale = Locale(identifier: "ja_JP")
+        dateformatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        let startDate = dateformatter.date(from: "2018/11/17 10:00:00")
+        let endDate = dateformatter.date(from: "2018/11/17 11:00:00")
+        dateComponents.minute = 10  // 間隔時間
         let quantityType = HKObjectType.quantityType(forIdentifier: .heartRate)!,
         
         query = HKStatisticsCollectionQuery(quantityType: quantityType, quantitySamplePredicate: nil, options: [.discreteAverage, .discreteMin, .discreteMax], anchorDate: startDate!, intervalComponents: dateComponents)
