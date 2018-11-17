@@ -12,6 +12,7 @@ import HealthKit
 class ViewController: UIViewController {
     
     
+    @IBOutlet weak var averageView: UITextView!
     private let healthStore = HKHealthStore()
     // ワークアウトと心拍数を読み出しに設定
     private let readDataTypes: Set<HKObjectType> = [
@@ -59,13 +60,14 @@ class ViewController: UIViewController {
     private var heartRateStatistics = [HKStatistics]()
     
     private func getHeartRateWithFiveMinutes() {
+        var average = ""
         var dateComponents = DateComponents()
         let dateformatter = DateFormatter()
         dateformatter.locale = Locale(identifier: "ja_JP")
         dateformatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
-        let startDate = dateformatter.date(from: "2018/11/17 10:00:00")
-        let endDate = dateformatter.date(from: "2018/11/17 11:00:00")
-        dateComponents.minute = 10  // 間隔時間
+        let startDate = dateformatter.date(from: "2018/11/17 16:00:00")
+        let endDate = dateformatter.date(from: "2018/11/17 18:00:00")
+        dateComponents.minute = 5  // 間隔時間
         let quantityType = HKObjectType.quantityType(forIdentifier: .heartRate)!,
         
         query = HKStatisticsCollectionQuery(quantityType: quantityType, quantitySamplePredicate: nil, options: [.discreteAverage, .discreteMin, .discreteMax], anchorDate: startDate!, intervalComponents: dateComponents)
@@ -75,44 +77,13 @@ class ViewController: UIViewController {
             }
             result.enumerateStatistics(from: startDate!, to: endDate!) { (statistic, stop) in
                 self.heartRateStatistics.append(statistic)
-                print("平均値 \(statistic.averageQuantity()?.doubleValue(for: HKUnit(from: "count/min")) ?? 0) bpm")
+                print("平均値 \(statistic.averageQuantity()?.doubleValue(for: HKUnit(from: "count/min")) ?? 0) 脈/分")
+                average += "平均値 \(statistic.averageQuantity()?.doubleValue(for: HKUnit(from: "count/min")) ?? 0) 脈/分\n"
             }
+             self.averageView.text = average
         }
+        
         healthStore.execute(query)
     }
     
-    
-    //    func getWorkout(){
-    //        // 取得する期間を設定
-    //        let dateformatter = DateFormatter()
-    //        dateformatter.dateFormat = "yyyy/MM/dd"
-    //        let startDate = dateformatter.date(from: "2017/12/01")
-    //        let endDate = dateformatter.date(from: "2018/01/01")
-    //
-    //        // 取得するデータを設定
-    //        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: [])
-    //        let sort = [NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: true)]
-    //        let q = HKSampleQuery(sampleType: HKObjectType.workoutType(), predicate: predicate, limit: 0, sortDescriptors: sort, resultsHandler:{
-    //            (query, result, error) in
-    //
-    //            if let e = error {
-    //                print("Error: \(e.localizedDescription)")
-    //                return
-    //            }
-    //            DispatchQueue.main.async {
-    //                guard let r = result else {
-    //                    return
-    //                }
-    //
-    //                let workouts = r as! [HKWorkout]
-    //                for workout in workouts {
-    //                    print(workout.startDate)
-    //                    print(workout.totalDistance!)
-    //                    print(workout.totalEnergyBurned!)
-    //                }
-    //            }
-    //        })
-    //
-    //        healthStore.execute(q)
-    //    }
 }
