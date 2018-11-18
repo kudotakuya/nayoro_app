@@ -26,6 +26,7 @@
 		882DD28C219FE44400D77611 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882DD28A219FE44400D77611 /* HealthKit.framework */; };
 		882DD290219FE4AF00D77611 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882DD28F219FE4AF00D77611 /* HealthKit.framework */; };
 		882DD29221A0FA7400D77611 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 882DD29121A0FA7400D77611 /* logo.png */; };
+		882DD29421A10B8900D77611 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DD29321A10B8900D77611 /* GraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		882DD28E219FE4AF00D77611 /* nayoro_watch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "nayoro_watch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		882DD28F219FE4AF00D77611 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		882DD29121A0FA7400D77611 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		882DD29321A10B8900D77611 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				882DD239219FE3DA00D77611 /* Assets.xcassets */,
 				882DD23B219FE3DA00D77611 /* LaunchScreen.storyboard */,
 				882DD23E219FE3DA00D77611 /* Info.plist */,
+				882DD29321A10B8900D77611 /* GraphView.swift */,
 			);
 			path = nayoro_watch;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 			files = (
 				882DD235219FE3D900D77611 /* ViewController.swift in Sources */,
 				882DD233219FE3D900D77611 /* AppDelegate.swift in Sources */,
+				882DD29421A10B8900D77611 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

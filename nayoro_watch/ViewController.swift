@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var moneyLabel: UILabel!
     @IBOutlet weak var averageView: UITextView!
+    @IBOutlet weak var graphView: GraphView!
     private let healthStore = HKHealthStore()
     var money = 10000
     var ave = ""
@@ -28,16 +29,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() { do {
         super.viewDidLoad()
         
+        graphView.setupPoints(points: [80,60,97,60,100,130,138,90,60,97,90,100,130,138])
+        
         healthStore.requestAuthorization(toShare: nil, read: readDataTypes) { (success, error) in
             guard success, error == nil else {
                 return
             }
         }
 
-        self.getHeartRateWithFiveMinutes( {average, money in
+        self.getHeartRateWithFiveMinutes( {average, money, data_array in
             print(average)
             self.ave = average
             self.mon = money
+            self.graphView.setupPoints(points: data_array)
         })
 
 
@@ -56,10 +60,11 @@ class ViewController: UIViewController {
 
     @objc func timerUpdateData() {
         print("update data")
-        self.getHeartRateWithFiveMinutes( {average, money in
+        self.getHeartRateWithFiveMinutes( {average, money, data_array in
             print(average)
             self.ave = average
             self.mon = money
+            self.graphView.setupPoints(points: data_array)
         })
     }
     
@@ -67,7 +72,7 @@ class ViewController: UIViewController {
 
     private var heartRateStatistics = [HKStatistics]()
     
-    private func getHeartRateWithFiveMinutes(_ after:@escaping (String, Int) -> ()) {
+    private func getHeartRateWithFiveMinutes(_ after:@escaping (String, Int, [Int]) -> ()) {
         var average = ""
         let calendar = Calendar.current
         let now = Date()
@@ -83,6 +88,8 @@ class ViewController: UIViewController {
         var time = ""
         var calc_time = 0
         var now_data = ""
+        var data_array: [Int] = []
+        var data_row = 0.0
         
         print(nowDate)
         print(secondHourDate)
@@ -102,11 +109,14 @@ class ViewController: UIViewController {
                 average += "\(time) 平均値 \(statistic.averageQuantity()?.doubleValue(for: HKUnit(from: "count/min")).rounded() ?? 0) 脈/分\n"
                 now_data = "\(statistic.averageQuantity()?.doubleValue(for: HKUnit(from: "count/min")).rounded() ?? 0)"
                 
+                data_row = statistic.averageQuantity()?.doubleValue(for: HKUnit(from: "count/min")) ?? 0
+                data_array.append(Int(data_row))
                 self.money -= 3
             }
             
-            //self.postJson(time: nowDate, heart_rate: now_data)
-            after(average, self.money)
+            self.postJson(time: nowDate, heart_rate: now_data)
+            
+            after(average, self.money, data_array)
             
         }
         
