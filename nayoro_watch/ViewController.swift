@@ -105,7 +105,7 @@ class ViewController: UIViewController {
                 self.money -= 3
             }
             
-            self.postJson(time: nowDate, heart_rate: now_data)
+            //self.postJson(time: nowDate, heart_rate: now_data)
             after(average, self.money)
             
         }
@@ -122,8 +122,6 @@ class ViewController: UIViewController {
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("CCjFz4XeW0Fc79GEEL9aR6DHJrGrnAwwKt7ZkuzZ", forHTTPHeaderField: "X-Cybozu-API-Token")
-    
-    
     
         let params:[String:Any] = [
             "app": 6,

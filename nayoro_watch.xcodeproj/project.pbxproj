@@ -25,6 +25,7 @@
 		882DD28B219FE44400D77611 /* HealthKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882DD289219FE44400D77611 /* HealthKitUI.framework */; };
 		882DD28C219FE44400D77611 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882DD28A219FE44400D77611 /* HealthKit.framework */; };
 		882DD290219FE4AF00D77611 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882DD28F219FE4AF00D77611 /* HealthKit.framework */; };
+		882DD29221A0FA7400D77611 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 882DD29121A0FA7400D77611 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		882DD28D219FE4A000D77611 /* nayoro_watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nayoro_watch.entitlements; sourceTree = "<group>"; };
 		882DD28E219FE4AF00D77611 /* nayoro_watch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "nayoro_watch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		882DD28F219FE4AF00D77611 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		882DD29121A0FA7400D77611 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 		882DD231219FE3D900D77611 /* nayoro_watch */ = {
 			isa = PBXGroup;
 			children = (
+				882DD29121A0FA7400D77611 /* logo.png */,
 				882DD28D219FE4A000D77611 /* nayoro_watch.entitlements */,
 				882DD232219FE3D900D77611 /* AppDelegate.swift */,
 				882DD234219FE3D900D77611 /* ViewController.swift */,
@@ -399,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882DD29221A0FA7400D77611 /* logo.png in Resources */,
 				882DD23D219FE3DA00D77611 /* LaunchScreen.storyboard in Resources */,
 				882DD23A219FE3DA00D77611 /* Assets.xcassets in Resources */,
 				882DD238219FE3D900D77611 /* Main.storyboard in Resources */,
